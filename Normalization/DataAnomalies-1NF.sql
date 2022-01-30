@@ -162,3 +162,31 @@ VALUES
 ('Joe', 'Black', '(789) 456-7899', '567 Address 12', '80196', 'Dallas', 'Home')
 
 SELECT * FROM Person
+
+INSERT INTO Person VALUES('Joe', 'Black', '(123) 456-0000', '123 Address 1', '32777', 'Miam', 'Home')
+SELECT * FROM Person
+INSERT INTO Person VALUES('Crystal', 'Williams', '(963) 456-3333', 'Crystal Address12', '32777', 'Miami', 'Work')
+SELECT * FROM Person
+
+UPDATE p
+	SET p.PhoneNumber = '(123) 456-0001' 
+FROM Person p
+WHERE p.PhoneNumber = '(123) 456-0000' 
+AND FirstName = 'Joe' 
+AND LastName = 'Black'
+AND StreeAddress = '123 Address 1'
+AND ZipCode = '32777'
+AND City = 'Miam'
+AND AddressType = 'Home'
+
+SELECT * FROM Person
+
+DELETE p
+FROM Person p
+WHERE PhoneNumber = '(123) 456-0001' 
+AND FirstName = 'Joe' 
+AND LastName = 'Black'
+AND StreeAddress = '123 Address 1'
+AND ZipCode = '32777'
+AND City = 'Miam'
+AND AddressType = 'Home'
